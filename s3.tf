@@ -23,3 +23,9 @@ resource "aws_s3_object" "fruit_salad_image" {
   key    = "fruitsalad.png"
   source = "image/fruitsalad.png"
 }
+
+resource "aws_s3_object" "cloud_image" {
+  bucket = aws_s3_bucket.web_bucket.id
+  key    = "cloud.png"
+  source = "image/cloud.png"
+}
